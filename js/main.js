@@ -24,13 +24,13 @@ function attempt(btn)
 	$(".card img").animate({
 		width: 1,
 		height: 450
-	}, 150 );
-
-	// change card color to black or white
-	if (card == 0)
-		$(".card img").attr("src","images/card_black.svg");
-	else
-		$(".card img").attr("src","images/card_white.svg");
+	}, 150, function() {
+		// change card color to black or white
+		if (card == 0)
+			$(".card img").attr("src","images/card_black.svg");
+		else
+			$(".card img").attr("src","images/card_white.svg");
+	});
 	
 	// card rotation step 2
 	$(".card img").animate({
@@ -39,10 +39,10 @@ function attempt(btn)
 	}, 150 ).delay(500).animate({
 		width: 1,
 		height: 450
-	}, 150 );
-	
-	// return card back
-	$(".card img").attr("src","images/card_back.svg");
+	}, 150, function() {
+		// return card back
+		$(".card img").attr("src","images/card_back.svg");
+	});
 
 	// card rotation step 3
 	$(".card img").animate({
