@@ -85,4 +85,17 @@ $(document).ready(function() {
 	$("button[name='clear']").click(function() {
 		clear();
 	});
+	// Hotkeys for black and white buttons
+	$(document).bind('keypress', 'b', function() {
+		attempt(0);
+	});
+	$(document).bind('keypress', 'n', function() {
+		attempt(1);
+	});
+	$(document).bind('keypress', 'и', function() {
+		attempt(0);
+	});
+	$(document).bind('keypress', 'т', function() {
+		attempt(1);
+	});
 });
