@@ -45,19 +45,19 @@ function attempt(btn)
 	$.cookie("bow_total", attempts);
 	
 	// card rotation step 1
-	$(".card img").animate({
+	$("#card").animate({
 		width: 1,
 		height: $(this).height
 	}, 150, function() {
 		// change card color to black or white
 		if (card == 0)
-			$(this).attr("src","images/card_black.svg");
+			$(this).attr("src","images/card_black.png");
 		else
-			$(this).attr("src","images/card_white.svg");
+			$(this).attr("src","images/card_white.png");
 	});
 	
 	// card rotation step 2
-	$(".card img").animate({
+	$("#card").animate({
 		width: 300,
 		height: $(this).height
 	}, 150 ).delay(500).animate({
@@ -65,11 +65,11 @@ function attempt(btn)
 		height: $(this).height
 	}, 150, function() {
 		// return card back
-		$(this).attr("src","images/card_back.svg");
+		$(this).attr("src","images/card_back.png");
 	});
 
 	// card rotation step 3
-	$(".card img").animate({
+	$("#card").animate({
 		width: 300,
 		height: $(this).height
 	}, 150 );
