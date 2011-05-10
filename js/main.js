@@ -4,6 +4,7 @@
 var card;
 var attempts = 0;
 var guesses = 0;
+var percent = 0;
 function new_card()
 {
 	return Math.round(Math.random());
@@ -12,14 +13,19 @@ function clear()
 {
 	attempts = 0;
 	guesses  = 0;
+	percent  = 0;
 	$("span#right").text(guesses);
 	$("span#total").text(attempts);
+	$("span#percent").text(percent);
 	// remove cookies
 	$.cookie("bow_right", null);
 	$.cookie("bow_total", null);
 }
 function attempt(btn)
 {
+	if (attempts == 0)
+		$("div.stat").fadeIn("slow");
+	
 	attempts++;
 	card = new_card();
 
@@ -29,6 +35,10 @@ function attempt(btn)
 		$("span#right").text(guesses);
 	}
 	$("span#total").text(attempts);
+	
+	// percent calculating
+	percent = Math.round(guesses / attempts * 100);
+	$("span#percent").text(percent);
 	
 	// sets cookie
 	$.cookie("bow_right", guesses);
@@ -63,7 +73,6 @@ function attempt(btn)
 		width: 300,
 		height: 450
 	}, 150 );
-
 }
 $(document).ready(function() {
 	// if last results stored in cookies
@@ -72,9 +81,13 @@ $(document).ready(function() {
 		// restore them
 		guesses = $.cookie("bow_right");
 		attempts = $.cookie("bow_total");
+		percent = Math.round(guesses / attempts * 100);
 		
 		$("span#right").text(guesses);
 		$("span#total").text(attempts);
+		$("span#percent").text(percent);
+		
+		$("div.stat").show();
 	}
 	$("button[name='black']").click(function() {
 		attempt(0);
