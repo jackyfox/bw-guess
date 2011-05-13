@@ -11,14 +11,28 @@
 <script type="text/javascript" src="js/jquery.cookie.js"></script>
 <script type="text/javascript" src="js/jquery.hotkeys.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<title>Проверка интуиции. Черная или белая</title>
+<title>Проверка интуиции</title>
+<!-- begin Google Analitics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-5601731-9']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- end Google Analitics -->
 </head>
 <body>
 <div class="container">
 	<center>
   	<div class="span-24">
-  	    <p style="padding-top: 10px;">Какая карта будет следующей:</p>
-  		<h2>черная или белая?</h2>
+  		<h2>Какая карта будет следующей: <br> черная или белая?</h2>
   	</div>
 	<!-- cardbar -->
   	<div class="span-8 prepend-8">
@@ -45,20 +59,17 @@
   	<!-- /cardbar -->  	
   	
   	<!-- sidebar -->
-  	<div class="span-6 prepend-2 last">
+  	<div class="span-6 prepend-1 last">
   	    <h4>Что это?</h4>
   	    <p>Игра на угадываение цвета карты.</p>
   	    <p>Перед вами рубашка карты. <br> Никто, даже компьютер, 
   	    не знает какая там карта прячется, пока вы не приняли решение и не нажали
   	    на соответствующую кнопку «Черная» или «Белая».</p>
-  	    <p>Сразу после нажатия на кнопку компьютер случайным образом создает 
-  	    оборотную сторону карты и показывает её вам.</p>
   	    <p>Ведётся лог правильных предположений и общего количества раундов. 
   	    Данные сохраняются в браузере.</p>
   	    <p>Некоторые считают, что таким образом можно тренировать интуицию</p>
   	    <h4>Быстрые кнопки</h4>
-  	    <p>Можно играть с клавиатуры
-  	    <img alt="B/И - черная; N/Т - белая" src="images/keys.svg"></p>
+  	    <img alt="B/И - черная; N/Т - белая" title="Можно играть с клавиатуры" src="images/keys.svg">
   	</div>
   	<!-- /sidebar -->
   	
