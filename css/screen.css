@@ -268,3 +268,22 @@ hr.space {background:#fff;color:#fff;visibility:hidden;}
 div.buttons button {
     width: 120px;	
 }
+
+div#shareBlock a {
+	display:inline-block; 
+	width:32px; 
+	height:32px; 
+	overflow:hidden;
+}
+
+div#shareBlock a#facebook {
+	background:url(../images/facebook.png) top left no-repeat;
+}
+
+div#shareBlock a#twitter {
+	background:url(../images/twitter.png) top left no-repeat;
+}
+
+div#shareBlock a#vkontakte {
+	background:url(../images/vkontakte.png) top left no-repeat;
+}
