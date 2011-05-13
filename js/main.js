@@ -44,6 +44,9 @@ function attempt(btn)
 	$.cookie("bow_right", guesses);
 	$.cookie("bow_total", attempts);
 	
+	// Stop the prev animation
+	$("#card").stop(true, true);
+	
 	// card rotation step 1
 	$("#card").animate({
 		width: 1,
